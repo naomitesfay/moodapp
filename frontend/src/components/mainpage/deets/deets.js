@@ -9,7 +9,18 @@ class Deets extends React.Component {
   render() {
     return (
       <div>
-      <button>Send</button>
+      <div className="deet-buttons">
+       <button>Happy</button>
+       <button>Sad</button>
+       <button>Calm</button>
+       <button>Angry</button>
+       <button>Fearless</button>
+       <button>Heavy</button>
+       <button>Social</button>
+       <button>Fatigue</button>
+       <button>Alert</button>
+       <button>Numb</button>
+      </div>
       </div>
     )
   }
