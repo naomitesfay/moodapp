@@ -1,15 +1,15 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import "./deets.scss"
+import "./moods.scss"
 
 
 
-class Deets extends React.Component {
+class Moods extends React.Component {
 
   render() {
     return (
       <div>
-      <div className="deet-buttons">
+      <div className="mood-buttons">
        <button>Happy</button>
        <button>Sad</button>
        <button>Calm</button>
@@ -28,4 +28,4 @@ class Deets extends React.Component {
 }
 
 
-export default Deets
+export default Moods

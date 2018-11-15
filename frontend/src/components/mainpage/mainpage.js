@@ -83,7 +83,7 @@ class Mainpage extends React.Component {
      render(){
       return(
 
-        <div className="deetsContainer">
+        <div className="moodsContainer">
         <h1>MOOD APP</h1>
         <button onClick={this.handleClickHappy}>HAPPY</button>
         <button onClick={this.handleClickCheerful}>CHEERFUL</button>

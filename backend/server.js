@@ -46,7 +46,7 @@ app.post("/mainpage", (req, res) => {
   receivedMoods.rating = 0
   const deets = new Moods(receivedMoods)
 
-  deets
+   moods
     .save()
     .then(() => {
       res.status(201).send("Moods added")
