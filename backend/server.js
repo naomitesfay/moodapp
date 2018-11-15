@@ -8,55 +8,56 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(bodyParser.json())
 app.use(cors())
 mongoose.connect(
-  "mongodb://localhost/deets",
+  "mongodb://localhost/moods",
   { useMongoClient: true }
 )
 mongoose.Promise = Promise
 mongoose.connection.on("error", err => console.error("Connection error:", err))
 mongoose.connection.once("open", () => console.log("Connected to mongodb"))
 
-const Product = mongoose.model("Product", {
+const Moods = mongoose.model("Moods", {
   name: String,
   rating: Number
 })
 
 app.get("/", (req, res) => {
-  res.send("Products API")
+  res.send("Moods Value")
 })
 
-app.get("/products", (req, res) => {
+app.get("/mainpage", (req, res) => {
   console.log("hello")
-  Product.find().then(products => {
-    res.json(products)
+  Product.find().then(moods => {
+    res.json(moods)
   })
 })
 
-app.get("/products/top", (req, res) => {
+app.get("/mainpage", (req, res) => {
   console.log("hello from top")
   Product.find()
     .sort({ rating: -1 })
     .limit(5)
-    .then(products => {
-      res.json(products)
+    .then(moods => {
+      res.json(moods)
     })
 })
 
-app.post("/products", (req, res) => {
-  const receivedProduct = req.body
-  receivedProduct.rating = 0
-  const product = new Product(receivedProduct)
+app.post("/mainpage", (req, res) => {
+  const receivedMoods = req.body
+  receivedMoods.rating = 0
+  const deets = new Moods(receivedMoods)
 
-  product
+  deets
     .save()
     .then(() => {
-      res.status(201).send("Product added")
+      res.status(201).send("Moods added")
     })
     .catch(err => {
       res.status(400).send(err)
     })
 })
 
-app.put("/products", (req, res) => {
+
+app.put("/mainpage", (req, res) => {
   console.log("hello from put", req.body._id)
   Product.findByIdAndUpdate(req.body._id, { rating: req.body.rating }, () => {
     console.log("hejhej")
