@@ -9,7 +9,7 @@ export default class Resultpage extends React.Component {
     return (
       <div>
         <h1>RESULTPAGE</h1>
-        
+
       </div>
     )
   }
