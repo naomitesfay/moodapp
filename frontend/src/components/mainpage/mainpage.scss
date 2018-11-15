@@ -5,8 +5,16 @@ body {
 }
 
 button {
+  background-color: #AF66C4;
+  color: #ffffff;
+  border-radius: 50%;
+  border: none;
+  height: 100px;
+  width: 100px;
+}
+
+.deetsContainer {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 10px;
+  flex-flow: row wrap;
+  justify-content: center;
 }
