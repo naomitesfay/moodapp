@@ -11,74 +11,53 @@ class Mainpage extends React.Component {
   }
 
       handleClickHappy = () => {
-        const points = this.state.value + 10
-          this.setState({
-              value: points
-          })
+          this.setPoints(10)
       }
 
       handleClickCheerful = () => {
-        const points = this.state.value + 10
-          this.setState({
-              value: points
-          })
+          this.setPoints(10)
       }
 
       handleClickCalm = () => {
-        const points = this.state.value + 10
-          this.setState({
-              value: points
-          })
+          this.setPoints(10)
       }
 
       handleClickSocial = () => {
-        const points = this.state.value + 10
-          this.setState({
-              value: points
-          })
+          this.setPoints(10)
       }
 
       handleClickActive = () => {
-        const points = this.state.value + 10
-          this.setState({
-              value: points
-          })
+          this.setPoints(10)
       }
 
       handleClickSad = () => {
-        const points = this.state.value + 5
-          this.setState({
-              value: points
-          })
+          this.setPoints(5)
       }
 
       handleClickStressed = () => {
-        const points = this.state.value + 5
-          this.setState({
-              value: points
-          })
+          this.setPoints(5)
       }
 
       handleClickUnsocial = () => {
-        const points = this.state.value + 5
-          this.setState({
-              value: points
-          })
+          this.setPoints(5)
       }
 
       handleClickAngry = () => {
-        const points = this.state.value + 5
-          this.setState({
-              value: points
-          })
+          this.setPoints(5)
       }
 
       handleClickNumb = () => {
-        const points = this.state.value + 5
+        this.setPoints(5)
+      }
+
+
+      setPoints = (point) =>{
+        const currentPoint = this.state.value
           this.setState({
-              value: points
+              value: currentPoint + point
           })
       }
+
 
      render(){
       return(

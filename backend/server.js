@@ -17,34 +17,25 @@ mongoose.connection.once("open", () => console.log("Connected to mongodb"))
 
 const Moods = mongoose.model("Moods", {
   name: String,
-  rating: Number
+  value: Number
 })
 
 app.get("/", (req, res) => {
   res.send("Moods Value")
 })
 
-app.get("/mainpage", (req, res) => {
+app.get("/moods", (req, res) => {
   console.log("hello")
-  Product.find().then(moods => {
+  Moods.find().then(moods => {
     res.json(moods)
   })
 })
 
-app.get("/mainpage", (req, res) => {
-  console.log("hello from top")
-  Product.find()
-    .sort({ rating: -1 })
-    .limit(5)
-    .then(moods => {
-      res.json(moods)
-    })
-})
 
-app.post("/mainpage", (req, res) => {
+app.post("/moods", (req, res) => {
   const receivedMoods = req.body
-  receivedMoods.rating = 0
-  const deets = new Moods(receivedMoods)
+  receivedMoods.value = 0
+  const moods = new Moods(receivedMoods)
 
    moods
     .save()
@@ -57,9 +48,9 @@ app.post("/mainpage", (req, res) => {
 })
 
 
-app.put("/mainpage", (req, res) => {
+app.put("/moods", (req, res) => {
   console.log("hello from put", req.body._id)
-  Product.findByIdAndUpdate(req.body._id, { rating: req.body.rating }, () => {
+  Product.findByIdAndUpdate(req.body._id, { value: req.body.value }, () => {
     console.log("hejhej")
     res.json({ success: true })
   })
