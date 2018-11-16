@@ -2,8 +2,6 @@ import React from "react"
 import { HashRouter as Router, Route, Link } from "react-router-dom"
 import "./mainpage.scss"
 
-
-
 class Mainpage extends React.Component {
 
   state = {
@@ -75,6 +73,7 @@ class Mainpage extends React.Component {
         <button onClick={this.handleClickAngry}>ANGRY</button>
         <button onClick={this.handleClickNumb}>NUMB</button>
         {this.state.value}
+        <button onClick={this.}></button>
         </div>
 
       )

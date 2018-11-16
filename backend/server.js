@@ -16,8 +16,7 @@ mongoose.connection.on("error", err => console.error("Connection error:", err))
 mongoose.connection.once("open", () => console.log("Connected to mongodb"))
 
 const Moods = mongoose.model("Moods", {
-  name: String,
-  value: Number
+  value: Number,
 })
 
 app.get("/", (req, res) => {
@@ -48,13 +47,13 @@ app.post("/moods", (req, res) => {
 })
 
 
-app.put("/moods", (req, res) => {
-  console.log("hello from put", req.body._id)
-  Product.findByIdAndUpdate(req.body._id, { value: req.body.value }, () => {
-    console.log("hejhej")
-    res.json({ success: true })
-  })
-  // .then(product => {
+app.get("/moods", (req, res) => {
+  console.log("hello")
+  // mo.findByIdAndUpdate(req.body._id, { value: req.body.value }, () => {
+  //   console.log("hejhej")
+  //   res.json({ success: true })
+  // })
+  // // .then(product => {
   //   res.status(201).send("Product updated")
   // })
   // .catch(err => {
