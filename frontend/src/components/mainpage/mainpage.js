@@ -2,7 +2,26 @@ import React from "react"
 import { HashRouter as Router, Route, Link } from "react-router-dom"
 import "./mainpage.scss"
 
+
+
 class Mainpage extends React.Component {
+
+//
+// constructor() {
+//    super()
+//    this.handleSubmit = this.handleSubmit.bind(this)
+//  }
+//
+//  handleSubmit(event) {
+//    event.preventDefault()
+//    const data = new pointsData(event.target)
+//
+//    fetch('/api/form-submit-url', {
+//         method: 'POST',
+//         body: data,
+//       })
+
+
 
   state = {
       value: 0
@@ -57,23 +76,44 @@ class Mainpage extends React.Component {
       }
 
 
+      // handleSubmit(point) {
+      //   console.log()
+      // }
+
+
+
      render(){
       return(
 
         <div className="moodsContainer">
-        <h1>MOOD APP</h1>
+        <h3>How are you today?</h3>
+
+        <div className="mood-buttonContainer">
+        <div className="mood-button">
         <button onClick={this.handleClickHappy}>HAPPY</button>
         <button onClick={this.handleClickCheerful}>CHEERFUL</button>
+        </div>
+        <div className="mood-button">
         <button onClick={this.handleClickCalm}>CALM</button>
         <button onClick={this.handleClickSocial}>SOCIAL</button>
+        </div>
+        <div className="mood-button">
         <button onClick={this.handleClickActive}>ACTIVE</button>
         <button onClick={this.handleClickSad}>SAD</button>
+        </div>
+        <div className="mood-button">
         <button onClick={this.handleClickStressed}>STRESSED</button>
         <button onClick={this.handleClickUnsocial}>UNSOCIAL</button>
+        </div>
+        <div className="mood-button">
         <button onClick={this.handleClickAngry}>ANGRY</button>
         <button onClick={this.handleClickNumb}>NUMB</button>
+        </div>
+        </div>
         {this.state.value}
-        <button onClick={this.}></button>
+        <div className="add-button">
+        <button onSubmit={this.handleSubmit}>Add Moods/Next Page</button>
+        </div>
         </div>
 
       )

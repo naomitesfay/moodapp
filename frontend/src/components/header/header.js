@@ -6,7 +6,8 @@ class Header extends React.Component {
   render() {
     return (
       <div>
-       <h1> MOOD APP </h1>
+       <h1>iFeel</h1>
+       <h2>username</h2>
       </div>
     )
   }
@@ -14,4 +15,4 @@ class Header extends React.Component {
 }
 
 
-export default Header
+// export default Header

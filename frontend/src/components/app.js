@@ -2,6 +2,8 @@ import React from "react"
 import { HashRouter as Router, Route, Link } from "react-router-dom"
 import Mainpage from "./mainpage/mainpage"
 import Resultpage from "./resultpage/resultpage"
+import Header from "./header/header"
+import Footer from "./footer/footer"
 export class App extends React.Component {
 
 

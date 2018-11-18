@@ -2,19 +2,85 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  // background-color: #DA668F;
+  // background-color: #F4E194;
+  background-image: url("https://images.unsplash.com/photo-1525268771113-32d9e9021a97?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=874400d4481965d6b5beba0475784553&auto=format&fit=crop&w=800&q=80");
+  // background-repeat: no-repeat;
+  background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
 }
 
-button {
-  background-color: #AF66C4;
+// //
+// // background-image: url("https://images.unsplash.com/photo-1525268771113-32d9e9021a97?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=874400d4481965d6b5beba0475784553&auto=format&fit=crop&w=800&q=80") ;
+// // -webkit-background-size: cover;
+// // -moz-background-size: cover;
+// // -o-background-size: cover;
+// // background-size: cover;
+//
+
+// body#background {
+// background-image: url("https://images.unsplash.com/photo-1525268771113-32d9e9021a97?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=874400d4481965d6b5beba0475784553&auto=format&fit=crop&w=800&q=80") no-repeat 50% 50% fixed;
+// background-size: cover;
+// -moz-background-size: cover;
+// -o-background-size: cover;
+// -webkit-background-size: cover;
+// }
+
+
+.moodsContainer {
+  margin-top: 0px;
+
+}
+
+.mood-buttonContainer {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+}
+
+
+.mood-button button {
+  background-color: #D694B5;
   color: #ffffff;
   border-radius: 50%;
   border: none;
-  height: 100px;
-  width: 100px;
+  height: 75px;
+  width: 75px;
+  margin: 10px;
 }
 
-.moodsContainer {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
+
+.add-button {
+  margin-top: 30px;
+}
+
+
+.add-button button {
+  color: white;
+  background: #DA668F;
+  border: 1px solid white;
+  font-size: 17px;
+  padding: 7px 12px;
+  font-weight: normal;
+  margin: 6px 0px;
+  margin-right: 12px;
+  display: inline-block;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+  min-width: 120px;
+}
+
+.add-button button:hover {
+color: #DA668F;
+background: white;
+}
+
+
+
+
+h3 {
+  font-size: 50px;
+  color: white;
 }
