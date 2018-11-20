@@ -37,7 +37,7 @@ app.post("/moods", (req, res) => {
   const moods = new Moods(req.body)
   moods.date = Date.now()
 
-  console.log("moods: ", moods)
+  console.log("moods2: ", moods)
 
    moods
     .save()

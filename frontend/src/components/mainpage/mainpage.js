@@ -1,5 +1,5 @@
 import React from "react"
-import { HashRouter as Router, Route, Link } from "react-router-dom"
+import { HashRouter as Router, Route, Link, Redirect } from "react-router-dom"
 import "./mainpage.scss"
 
 const emotionData = [
@@ -29,22 +29,35 @@ class MainPage extends React.Component {
   constructor(props){
       super(props);
       this.state = {
-        value: "",
+        mood: null,
+        didSend: false
       }
     }
 
   handleClick = (mood) => {
+    this.setState({mood})
+  }
+
+  handleSubmit = () => {
+
+    if(!this.state.mood){
+      alert("hej")
+      return
+    }
+
+
     fetch("http://localhost:8085/moods", {
       method: 'POST',
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({emotion: mood}) // "{mood: mood}"
-    }).then(function (data) {
+      body: JSON.stringify({emotion: this.state.mood}) // "{mood: mood}"
+    }).then((data) => {
       console.log('Request success: ', data);
+      this.setState({didSend: true})
     })
-    .catch(function (error) {
+    .catch((error) => {
       console.log('Request failure: ', error);
     });
   }
@@ -57,9 +70,13 @@ class MainPage extends React.Component {
       }
 
      render(){
+       if(this.state.didSend){
+         return (<Redirect to='/resultpage' />)
+       }
       return(
 
         <div className="moodsContainer">
+        <pre>{JSON.stringify(this.state,2,2)}</pre>
         <h3>How are you today?</h3>
         <div className="mood-buttonContainer">
         <div className="mood-button">
@@ -95,7 +112,7 @@ class MainPage extends React.Component {
         </div>
         {this.state.value}
         <div className="add-button">
-        <button onSubmit={this.handleSubmit}>Add Moods/Next Page</button>
+        <button onClick={this.handleSubmit}>Add Moods/Next Page</button>
         </div>
         </div>
 
