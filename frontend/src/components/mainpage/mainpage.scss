@@ -10,9 +10,7 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  background: #EB3349;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to top, #F45C43, #EB3349);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to top, #F45C43, #EB3349); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: #FFFFFF;  /* fallback for old browsers */
 }
 
 // //
@@ -42,13 +40,20 @@ body {
 }
 
 .mood-button button {
-  background-color: #5e515a;
-  color: #ffffff;
+  background-color: #FFFFFF;
+  color: #7A28CB;
+  border-color: #7A28CB;
   border-radius: 50%;
-  border: none;
+  border-style: solid;
   height: 100px;
   width: 100px;
   margin: 10px;
+  cursor: pointer;
+}
+
+.mood-button button:hover {
+color: #ffffff;
+background: #7A28CB;
 }
 
 .add-button {
@@ -59,7 +64,7 @@ body {
   color: white;
   background: #DA668F;
   border: 1px solid white;
-  font-size: 17px;
+  font-size: 20px;
   padding: 7px 12px;
   font-weight: normal;
   margin: 6px 0px;
@@ -70,12 +75,12 @@ body {
   min-width: 120px;
 }
 
-// .add-button button:hover {
-// color: #DA668F;
-// background: white;
-// }
+.add-button button:hover {
+color: #DA668F;
+background: white;
+}
 
 h3 {
   font-size: 50px;
-  color: white;
+  color: #7A28CB;
 }

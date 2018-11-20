@@ -8,21 +8,21 @@ const emotionData = [
 {moodType: "calm", points: 10},
 {moodType: "social", points: 10},
 {moodType: "active", points: 10},
-{moodType: "rested", points: 10}
-{moodType: "alert", points: 10}
-{moodType: "focused", points: 10}
-{moodType: "fearless", points: 10}
-{moodType: "optimistic", points: 10}
+{moodType: "rested", points: 10},
+{moodType: "alert", points: 10},
+{moodType: "focused", points: 10},
+{moodType: "fearless", points: 10},
+{moodType: "optimistic", points: 10},
 {moodType: "sad", points: 5},
 {moodType: "cheerful", points: 5},
 {moodType: "stressed", points: 5},
 {moodType: "angry", points: 5},
-{moodType: "numb", points: 5}
-{moodType: "heavy", points: 5}
-{moodType: "unsocial", points: 5}
-{moodType: "fatigue", points: 5}
-{moodType: "pessimistic", points: 5}
-{moodType: "unconcerned", points: 5}
+{moodType: "numb", points: 5},
+{moodType: "heavy", points: 5},
+{moodType: "unsocial", points: 5},
+{moodType: "fatigue", points: 5},
+{moodType: "pessimistic", points: 5},
+{moodType: "unconcerned", points: 5},
 {moodType: "irritated", points: 5}
 ]
 
