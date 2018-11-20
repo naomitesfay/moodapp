@@ -76,3 +76,16 @@ h3 {
   font-size: 50px;
   color: white;
 }
+
+@media (min-width: 1281px) {
+    // DESKTOP
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  // TABLET
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+ // MOBILE
+
+}
