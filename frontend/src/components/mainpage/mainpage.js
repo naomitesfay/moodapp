@@ -52,23 +52,23 @@ class MainPage extends React.Component {
         <div className="mood-buttonContainer">
         <div className="mood-button">
         <button onClick={() => this.handleClick("happy")}>HAPPY</button>
-        <button onClick={this.handleClickCheerful}>CHEERFUL</button>
+        <button onClick={() => this.handleClick("cheerful")}>CHEERFUL</button>
         </div>
         <div className="mood-button">
-        <button onClick={this.handleClickCalm}>CALM</button>
-        <button onClick={this.handleClickSocial}>SOCIAL</button>
+        <button onClick={() => this.handleClick("calm")}>CALM</button>
+        <button onClick={() => this.handleClick("social")}>SOCIAL</button>
         </div>
         <div className="mood-button">
-        <button onClick={this.handleClickActive}>ACTIVE</button>
-        <button onClick={this.handleClickSad}>SAD</button>
+        <button onClick={() => this.handleClick("active")}>ACTIVE</button>
+        <button onClick={() => this.handleClick("sad")}>SAD</button>
         </div>
         <div className="mood-button">
-        <button onClick={this.handleClickStressed}>STRESSED</button>
-        <button onClick={this.handleClickUnsocial}>UNSOCIAL</button>
+        <button onClick={() => this.handleClick("stressed")}>STRESSED</button>
+        <button onClick={() => this.handleClick("unsocial")}>UNSOCIAL</button>
         </div>
         <div className="mood-button">
-        <button onClick={this.handleClickAngry}>ANGRY</button>
-        <button onClick={this.handleClickNumb}>NUMB</button>
+        <button onClick={() => this.handleClick("angry")}>ANGRY</button>
+        <button onClick={() => this.handleClick("numb")}>NUMB</button>
         </div>
         </div>
         {this.state.value}
