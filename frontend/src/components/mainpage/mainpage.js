@@ -14,7 +14,6 @@ const emotionData = [
 {moodType: "fearless", points: 10},
 {moodType: "optimistic", points: 10},
 {moodType: "sad", points: 5},
-{moodType: "cheerful", points: 5},
 {moodType: "stressed", points: 5},
 {moodType: "angry", points: 5},
 {moodType: "numb", points: 5},
@@ -66,20 +65,30 @@ class MainPage extends React.Component {
         <div className="mood-button">
         <button onClick={() => this.handleClick("happy")}>HAPPY</button>
         <button onClick={() => this.handleClick("cheerful")}>CHEERFUL</button>
+        <button onClick={() => this.handleClick("rested")}>RESTED</button>
+        <button onClick={() => this.handleClick("alert")}>ALERT</button>
         </div>
         <div className="mood-button">
         <button onClick={() => this.handleClick("calm")}>CALM</button>
         <button onClick={() => this.handleClick("social")}>SOCIAL</button>
+        <button onClick={() => this.handleClick("focused")}>FOCUSED</button>
+        <button onClick={() => this.handleClick("fearless")}>FEARLESS</button>
         </div>
         <div className="mood-button">
+        <button onClick={() => this.handleClick("optimistic")}>OPTIMISTIC</button>
         <button onClick={() => this.handleClick("active")}>ACTIVE</button>
         <button onClick={() => this.handleClick("sad")}>SAD</button>
+        <button onClick={() => this.handleClick("heavy")}>HEAVY</button>
         </div>
         <div className="mood-button">
         <button onClick={() => this.handleClick("stressed")}>STRESSED</button>
         <button onClick={() => this.handleClick("unsocial")}>UNSOCIAL</button>
+        <button onClick={() => this.handleClick("fatigue")}>FATIGUE</button>
+        <button onClick={() => this.handleClick("pessimistic")}>PESSIMISTIC</button>
         </div>
         <div className="mood-button">
+        <button onClick={() => this.handleClick("unconcerned")}>UNCONCERNED</button>
+        <button onClick={() => this.handleClick("IRRITATED")}>IRRITATED</button>
         <button onClick={() => this.handleClick("angry")}>ANGRY</button>
         <button onClick={() => this.handleClick("numb")}>NUMB</button>
         </div>
