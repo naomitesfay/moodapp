@@ -28,10 +28,8 @@ body {
 // -webkit-background-size: cover;
 // }
 
-
 .moodsContainer {
   margin-top: 0px;
-
 }
 
 .mood-buttonContainer {
@@ -40,22 +38,19 @@ body {
   justify-content: space-between;
 }
 
-
 .mood-button button {
-  background-color: #D694B5;
+  background-color: #5e515a;
   color: #ffffff;
   border-radius: 50%;
   border: none;
-  height: 75px;
-  width: 75px;
+  height: 100px;
+  width: 100px;
   margin: 10px;
 }
-
 
 .add-button {
   margin-top: 30px;
 }
-
 
 .add-button button {
   color: white;
@@ -76,9 +71,6 @@ body {
 color: #DA668F;
 background: white;
 }
-
-
-
 
 h3 {
   font-size: 50px;

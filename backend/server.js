@@ -9,14 +9,15 @@ app.use(bodyParser.json())
 app.use(cors())
 mongoose.connect(
   "mongodb://localhost/moods",
-  { useMongoClient: true }
+  { useNewUrlParser: true }
 )
 mongoose.Promise = Promise
 mongoose.connection.on("error", err => console.error("Connection error:", err))
 mongoose.connection.once("open", () => console.log("Connected to mongodb"))
 
 const Moods = mongoose.model("Moods", {
-  value: Number,
+  emotion: String,
+  date: Date
 })
 
 app.get("/", (req, res) => {
@@ -32,9 +33,11 @@ app.get("/moods", (req, res) => {
 
 
 app.post("/moods", (req, res) => {
-  const receivedMoods = req.body
-  receivedMoods.value = 0
-  const moods = new Moods(receivedMoods)
+  console.log(req.body)
+  const moods = new Moods(req.body)
+  moods.date = Date.now()
+
+  console.log("moods: ", moods)
 
    moods
     .save()
