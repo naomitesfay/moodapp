@@ -39,7 +39,7 @@ export default class Resultpage extends React.Component {
           <Line type="monotone" dataKey="uv" stroke="#8884d8" />
         </LineChart>
         </div>
-        <button>BACK</button>
+        <button className="back-button">Go back</button>
       </div>
     )
   }

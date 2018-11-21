@@ -5,8 +5,9 @@ class Footer extends React.Component {
   render() {
     return (
       <div className="footerSection">
-        <h4>Tracking your mood since 2018</h4>
-        <h4>Developed by Naomi and Nathalie</h4>
+        <p>Tracking your mood since 2018</p>
+        <p>Developed by <em>Naomi</em> and <em>Nathalie</em> from Technigo Bootcamp</p>
+        <p>A responsive moodapp powered by React, MongoDB database, Node.js and SASS</p>
       </div>
     )
   }

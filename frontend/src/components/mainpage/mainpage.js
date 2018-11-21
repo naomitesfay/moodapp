@@ -73,11 +73,16 @@ class MainPage extends React.Component {
        if(this.state.didSend){
          return (<Redirect to='/resultpage' />)
        }
+
+       function refreshPage(){
+         window.location.reload();
+      }
+
       return(
 
         <div className="moodsContainer">
         <pre>{JSON.stringify(this.state,2,2)}</pre>
-        <h3>How are you today?</h3>
+        <h1>How are you today?</h1>
         <div className="mood-buttonContainer">
         <div className="mood-button">
         <button onClick={() => this.handleClick("happy")}>HAPPY</button>
@@ -104,15 +109,18 @@ class MainPage extends React.Component {
         <button onClick={() => this.handleClick("pessimistic")}>PESSIMISTIC</button>
         </div>
         <div className="mood-button">
-        <button onClick={() => this.handleClick("unconcerned")}>UNCONCERNED</button>
-        <button onClick={() => this.handleClick("IRRITATED")}>IRRITATED</button>
+        <button onClick={() => this.handleClick("bitter")}>BITTER</button>
+        <button onClick={() => this.handleClick("irritated")}>IRRITATED</button>
         <button onClick={() => this.handleClick("angry")}>ANGRY</button>
         <button onClick={() => this.handleClick("numb")}>NUMB</button>
         </div>
         </div>
         {this.state.value}
         <div className="add-button">
-        <button onClick={this.handleSubmit}>Add Moods/Next Page</button>
+        <button onClick={this.handleSubmit}><span>Next</span></button>
+        </div>
+        <div className="reload-button">
+        <button type="button" onClick={ refreshPage }><span>Try again</span></button>
         </div>
         </div>
 
