@@ -20,6 +20,7 @@ mongoose.connection.once("open", () => console.log("Connected to mongodb"))
 
 const Moods = mongoose.model("Moods", {
   emotion: String,
+  points: Number,
   date: Date
 })
 

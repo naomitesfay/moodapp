@@ -34,24 +34,24 @@ class MainPage extends React.Component {
       }
     }
 
-  handleClick = (mood) => {
-    this.setState({mood})
+  handleClick = (mood, points) => {
+    this.setState({mood, points})
   }
 
   handleSubmit = () => {
 
     if(!this.state.mood){
-      alert("hej")
+      alert("Pick a mood")
       return
     }
 
-    fetch("http://localhost:8085/moods", {
+    fetch("http://localhost:8080/moods", {
       method: 'POST',
       mode: 'cors',
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({emotion: this.state.mood}) // "{mood: mood}"
+      body: JSON.stringify({emotion: this.state.mood,points:this.state.points}) // "{mood: mood}"
     }).then((data) => {
       console.log('Request success: ', data)
       this.setState({didSend: true})
@@ -87,39 +87,41 @@ class MainPage extends React.Component {
 
         <div className="mood-buttonContainer">
           <div className="mood-button">
-          <button onClick={() => this.handleClick("happy")}>HAPPY</button>
-          <button onClick={() => this.handleClick("cheerful")}>CHEERFUL</button>
-          <button onClick={() => this.handleClick("rested")}>RESTED</button>
-          <button onClick={() => this.handleClick("alert")}>ALERT</button>
+          <button onClick={() => this.handleClick("happy", 10 )}>HAPPY</button>
+          <button onClick={() => this.handleClick("cheerful", 10)}>CHEERFUL</button>
+          <button onClick={() => this.handleClick("rested", 10)}>RESTED</button>
+          <button onClick={() => this.handleClick("alert", 10)}>ALERT</button>
           </div>
         <div className="mood-button">
-          <button onClick={() => this.handleClick("calm")}>CALM</button>
-          <button onClick={() => this.handleClick("social")}>SOCIAL</button>
-          <button onClick={() => this.handleClick("focused")}>FOCUSED</button>
-          <button onClick={() => this.handleClick("fearless")}>FEARLESS</button>
+          <button onClick={() => this.handleClick("calm", 10)}>CALM</button>
+          <button onClick={() => this.handleClick("social", 10)}>SOCIAL</button>
+          <button onClick={() => this.handleClick("focused", 10)}>FOCUSED</button>
+          <button onClick={() => this.handleClick("fearless", 10)}>FEARLESS</button>
         </div>
           <div className="mood-button">
-          <button onClick={() => this.handleClick("optimistic")}>OPTIMISTIC</button>
-          <button onClick={() => this.handleClick("active")}>ACTIVE</button>
-          <button onClick={() => this.handleClick("sad")}>SAD</button>
-          <button onClick={() => this.handleClick("heavy")}>HEAVY</button>
+          <button onClick={() => this.handleClick("optimistic", 10)}>OPTIMISTIC</button>
+          <button onClick={() => this.handleClick("active", 10)}>ACTIVE</button>
+          <button onClick={() => this.handleClick("sad", 5)}>SAD</button>
+          <button onClick={() => this.handleClick("heavy", 5)}>HEAVY</button>
         </div>
         <div className="mood-button">
-          <button onClick={() => this.handleClick("stressed")}>STRESSED</button>
-          <button onClick={() => this.handleClick("unsocial")}>UNSOCIAL</button>
-          <button onClick={() => this.handleClick("fatigue")}>FATIGUE</button>
-          <button onClick={() => this.handleClick("pessimistic")}>PESSIMISTIC</button>
+          <button onClick={() => this.handleClick("stressed", 5)}>STRESSED</button>
+          <button onClick={() => this.handleClick("unsocial", 5)}>UNSOCIAL</button>
+          <button onClick={() => this.handleClick("fatigue", 5)}>FATIGUE</button>
+          <button onClick={() => this.handleClick("pessimistic", 5)}>PESSIMISTIC</button>
         </div>
         <div className="mood-button">
-          <button onClick={() => this.handleClick("bitter")}>BITTER</button>
-          <button onClick={() => this.handleClick("irritated")}>IRRITATED</button>
-          <button onClick={() => this.handleClick("angry")}>ANGRY</button>
-          <button onClick={() => this.handleClick("numb")}>NUMB</button>
+          <button onClick={() => this.handleClick("bitter", 5)}>BITTER</button>
+          <button onClick={() => this.handleClick("irritated", 5)}>IRRITATED</button>
+          <button onClick={() => this.handleClick("angry", 5)}>ANGRY</button>
+          <button onClick={() => this.handleClick("numb", 5)}>NUMB</button>
           </div>
         </div>
         {this.state.value}
         <div className="AddReturnButtons">
+          <Link to="/resultpage">
           <button onClick={this.handleSubmit} className="add-button"><span>Next</span></button>
+          </Link>
           <button onClick={ refreshPage }><span>Try again</span></button>
         </div>
 
