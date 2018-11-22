@@ -7,7 +7,7 @@ class Header extends React.Component {
     return (
       <div>
        <h1>iFeel</h1>
-       <h2>username</h2>
+       <img className="headerImage" src="images/waves.png"/>
       </div>
     )
   }
@@ -15,4 +15,4 @@ class Header extends React.Component {
 }
 
 
-// export default Header
+export default Header

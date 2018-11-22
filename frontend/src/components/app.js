@@ -4,6 +4,8 @@ import Mainpage from "./mainpage/mainpage"
 import Resultpage from "./resultpage/resultpage"
 import Header from "./header/header"
 import Footer from "./footer/footer"
+
+
 export class App extends React.Component {
 
 
@@ -13,6 +15,7 @@ export class App extends React.Component {
     return (
       <Router>
         <div>
+          <Header />
           <Link to="/"> Mainpage </Link>
           <Link to="/resultpage"> Resultpage </Link>
           <Route exact path="/" component={Mainpage} />

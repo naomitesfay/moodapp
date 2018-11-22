@@ -4,30 +4,13 @@ body {
   font-family: sans-serif;
   // background-color: #DA668F;
   // background-color: #F4E194;
-  background-image: url("https://images.unsplash.com/photo-1525268771113-32d9e9021a97?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=874400d4481965d6b5beba0475784553&auto=format&fit=crop&w=800&q=80");
+  background-image: url("https://images.unsplash.com/photo-1517315003714-a071486bd9ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e6610aa0e51014aa2a57fee0356f0722&auto=format&fit=crop&w=1051&q=80");
   // background-repeat: no-repeat;
   background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   -webkit-background-size: cover;
-  background: #FFFFFF;  /* fallback for old browsers */
 }
-
-// //
-// // background-image: url("https://images.unsplash.com/photo-1525268771113-32d9e9021a97?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=874400d4481965d6b5beba0475784553&auto=format&fit=crop&w=800&q=80") ;
-// // -webkit-background-size: cover;
-// // -moz-background-size: cover;
-// // -o-background-size: cover;
-// // background-size: cover;
-//
-
-// body#background {
-// background-image: url("https://images.unsplash.com/photo-1525268771113-32d9e9021a97?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=874400d4481965d6b5beba0475784553&auto=format&fit=crop&w=800&q=80") no-repeat 50% 50% fixed;
-// background-size: cover;
-// -moz-background-size: cover;
-// -o-background-size: cover;
-// -webkit-background-size: cover;
-// }
 
 .moodsContainer {
   margin-top: 0px;
@@ -40,11 +23,12 @@ body {
 }
 
 .mood-button button {
-  background-color: #FFFFFF;
-  color: #7A28CB;
-  border-color: #7A28CB;
+  background-color: transparent;
+  color: #743C6A;
+  border-color: #743C6A;
   border-radius: 50%;
   border-style: solid;
+  font-weight: bold;
   height: 100px;
   width: 100px;
   margin: 10px;
@@ -52,8 +36,8 @@ body {
 }
 
 .mood-button button:hover {
-color: #ffffff;
-background: #7A28CB;
+color: #743C6A;
+background: #e4eefc;
 }
 
 .add-button {
@@ -61,7 +45,7 @@ background: #7A28CB;
 }
 
 .add-button button {
-  background: #7A28CB;
+  background: #743C6A;
   color: #ffffff;
   border: 1px solid white;
   font-size: 16px;
@@ -78,8 +62,8 @@ background: #7A28CB;
 }
 
 .add-button button:hover {
-color: #7A28CB;
-background: #ffffff;
+color: #743C6A;
+background: #e4eefc;
 }
 
 .reload-button {
@@ -87,7 +71,7 @@ background: #ffffff;
 }
 
 .reload-button button {
-  background: #7A28CB;
+  background: #743C6A;
   color: #ffffff;
   border: 1px solid white;
   font-size: 16px;
@@ -104,63 +88,12 @@ background: #ffffff;
 }
 
 .reload-button button:hover {
-color: #7A28CB;
-background: #ffffff;
+color: #743C6A;
+background: #e4eefc;
 }
 
-// .back-button {
-//   margin-top: 20px;
-// }
-//
-// .back-button button {
-//   background: #7A28CB;
-//   color: #ffffff;
-//   border: 1px solid white;
-//   font-size: 16px;
-//   font-weight: normal;
-//   padding: 10px;
-//   margin-top: 10px;
-//   margin-left: auto;
-//   margin-bottom: 20px;
-//   display: inline-block;
-//   border-radius: 25px;
-//   border: none;
-//   cursor: pointer;
-//   min-width: 120px;
-// }
-//
-// .back-button button:hover {
-// color: #7A28CB;
-// background: #ffffff;
-// }
 
-h1 {
+h3 {
   font-size: 50px;
-  color: #7A28CB;
-}
-
-p {
-  font-weight: normal;
-  font-size: 16px;
-}
-
-p em {
-  font-weight: lighter;
-  font-style: normal;
-  font-size: 18px;
-}
-
-.footerSection {
-  position: static;
-  left: 0;
-  padding: 10px 20px 100px 10px;
-  bottom: 5px;
-  width: 100%;
-  background-color: #7A28CB;
-  color: #FFFFFF;
-  text-align: left;
-}
-
-.developer {
-  font-weight: bold;
+  color: #fff;
 }

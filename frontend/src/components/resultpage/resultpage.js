@@ -33,7 +33,7 @@ export default class Resultpage extends React.Component {
 
     return (
       <div>
-        <h1>RESULTPAGE</h1>
+        <h4>RESULTPAGE</h4>
         <div className="chartContainer">
         <LineChart width={400} height={400} data={emotionData}>
           <Line type="monotone" dataKey="uv" stroke="#8884d8" />
