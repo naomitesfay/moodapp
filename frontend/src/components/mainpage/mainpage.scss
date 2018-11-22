@@ -1,9 +1,8 @@
+
 body {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  // background-color: #DA668F;
-  // background-color: #F4E194;
   background-image: url("https://images.unsplash.com/photo-1517315003714-a071486bd9ea?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=e6610aa0e51014aa2a57fee0356f0722&auto=format&fit=crop&w=1051&q=80");
   // background-repeat: no-repeat;
   background-size: cover;
@@ -40,10 +39,6 @@ color: #743C6A;
 background: #e4eefc;
 }
 
-// .add-button {
-//   margin-top: 20px;
-// }
-
 .AddReturnButtons button {
   background: #743C6A;
   color: #ffffff;
@@ -74,6 +69,11 @@ background: #e4eefc;
 
 }
 
+// .add-button {
+//   margin-top: 20px;
+// }
+
+
 // .reload-button button {
 //   background: #743C6A;
 //   color: #ffffff;
@@ -102,20 +102,3 @@ h3 {
   font-family: 'Lora', serif;
   color: #fff;
 }
-.chartContainer {
-   display: flex;
-   flex-direction: column;
-   align-items: center;
-   width: 100%;
-   background-color: #F0EDEE;
- }
-
- .chart {
-   display: flex;
-   flex-direction: row;
-   justify-content: center;
-   padding: 30px;
-   width: 80%;
-   height: 500px;
-   background-color: #F0EDEE;
- }
