@@ -45,7 +45,6 @@ class MainPage extends React.Component {
       return
     }
 
-
     fetch("http://localhost:8085/moods", {
       method: 'POST',
       mode: 'cors',
@@ -82,7 +81,7 @@ class MainPage extends React.Component {
 
         <div className="moodsContainer">
         <pre>{JSON.stringify(this.state,2,2)}</pre>
-        <h3>How are you today?</h3>
+        <h3>How are you feeling?</h3>
         <div className="mood-buttonContainer">
         <div className="mood-button">
         <button onClick={() => this.handleClick("happy")}>HAPPY</button>
