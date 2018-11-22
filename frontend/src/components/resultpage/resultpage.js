@@ -1,10 +1,12 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { LineChart, Line, Tooltip, YAxis, XAxis, CartesianGrid, Legend } from 'recharts';
+import { LineChart, Line, Tooltip, YAxis, XAxis, CartesianGrid, Legend } from 'recharts'
 import "./resultpage.scss"
 
 
 export default class Resultpage extends React.Component {
+
+
 
   render() {
     const emotionData = [
@@ -31,14 +33,11 @@ export default class Resultpage extends React.Component {
     {moodType: "irritated", points: 5}
     ]
 
+
+
     return (
       <div>
         <h4>RESULTPAGE</h4>
-        <div className="chartContainer">
-        <LineChart width={400} height={400} data={emotionData}>
-          <Line type="monotone" dataKey="uv" stroke="#8884d8" />
-        </LineChart>
-        </div>
         <button className="back-button">Go back</button>
       </div>
     )
