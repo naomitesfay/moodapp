@@ -1,14 +1,27 @@
 import React from "react"
 import { Link } from "react-router-dom"
-import { LineChart, Line, Tooltip, YAxis, XAxis, CartesianGrid, Legend } from 'recharts'
+// import { LineChart, Line, Tooltip, YAxis, XAxis, CartesianGrid, Legend } from 'recharts';
 import "./resultpage.scss"
 
 
 export default class Resultpage extends React.Component {
 
+// constructor(){
+//   super:()
+//   this.state = {points: []}
+// }
+//
+// componentWillMount(){
+//   fetch( 'http://localhost:8085/moods ')
+//     .then( response => response.json() )
+//     .then( ({results: items}) => this.setState({points}))
+// }
+//
+//   render() {
+//     let points = this.state.points;
+//     if(this.state.filter){
+//       items = items.fiult
 
-
-  render() {
     const emotionData = [
     {moodType: "happy", points: 10},
     {moodType: "cheerful", points: 10},
@@ -32,32 +45,29 @@ export default class Resultpage extends React.Component {
     {moodType: "unconcerned", points: 5},
     {moodType: "irritated", points: 5}
     ]
-
-<<<<<<< HEAD
-=======
-    fetch('http://localhost:8085/moods')
-    .then(function(data) {
-    })
-    .catch(function(error) {
-    });
-
-    fetch('http://localhost:8085/moods')
-    .then((resp) => resp.json())
->>>>>>> e7bd3e24f5dbf63c5ba39ce6788b76e21b88ad6f
-
-
+    //
+    // fetch('http://localhost:8085/moods')
+    // .then(function(data) {
+    // })
+    // .catch(function(error) {
+    // });
+    //
+    // fetch('http://localhost:8085/moods')
+    // .then((resp) => resp.json())
+    //
+    //
     return (
-      <div>
-<<<<<<< HEAD
-        <h4>RESULTPAGE</h4>
-=======
+      // <div>
+      // {points.map(points =>
+      // <Value key={points.value} points={points} />)}
+      //
+
         <h1>RESULTPAGE</h1>
         <div className="chartContainer">
         <LineChart width={400} height={400} data={emotionData}>
           <Line type="monotone" dataKey="uv" stroke="#8884d8" />
         </LineChart>
         </div>
->>>>>>> e7bd3e24f5dbf63c5ba39ce6788b76e21b88ad6f
         <button className="back-button">Go back</button>
       </div>
     )
