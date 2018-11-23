@@ -1,4 +1,3 @@
-
 body {
   margin: 0;
   padding: 0;
@@ -100,4 +99,29 @@ h3 {
   font-size: 50px;
   font-family: 'Lora', serif;
   color: #fff;
+}
+
+
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  h3 {
+    font-size: 40px;
+  }
+  .mood-button button {
+    height: 82px;
+    width: 82Px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  h3 {
+    font-size: 35px;
+  }
+
+  .mood-button button {
+    height: 82px;
+    width: 82Px;
+  }
+
 }

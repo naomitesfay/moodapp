@@ -7,7 +7,7 @@ class Header extends React.Component {
     return (
       <div>
        <h1>iFeel</h1>
-       <img className="headerImage" src="../images/waves.png"/>
+        <img className="headerImage" src="../images/waves.png"/>
       </div>
     )
   }

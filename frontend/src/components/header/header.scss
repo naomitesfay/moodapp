@@ -14,3 +14,17 @@ h1 {
   height: 50px;
   width: auto;
 }
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  h1 {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+}

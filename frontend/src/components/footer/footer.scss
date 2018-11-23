@@ -1,24 +1,49 @@
-
-
+h5 {
+  font-weight: normal;
+  font-size: 13px;
+}
 
 p {
   font-weight: normal;
-  font-size: 16px;
+  font-size: 10px;
 }
 
 p em {
   font-weight: bold;
   font-style: normal;
-  font-size: 16px;
+  font-size: 11px;
 }
 
-.footerSection {
+footer {
   position: static;
   left: 0;
-  padding: 10px 20px 40px 10px;
+  padding: 10px 20px 30px 10px;
   bottom: 5px;
   width: 100%;
-  background-color: #743C6A;
-  color: #FFFFFF;
+  background-color: #e4eefc;
+  color: #743C6A;
   text-align: left;
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  p {
+    font-weight: normal;
+    font-size: 15px;
+  }
+
+  p em {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  p {
+    font-weight: normal;
+    font-size: 15px;
+  }
+
+
+
 }

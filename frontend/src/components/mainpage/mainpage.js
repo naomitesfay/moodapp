@@ -82,7 +82,7 @@ class MainPage extends React.Component {
 
 
         <div className="moodsContainer">
-        <pre>{JSON.stringify(this.state,2,2)}</pre>
+        
         <h3>How are you feeling?</h3>
 
         <div className="mood-buttonContainer">
